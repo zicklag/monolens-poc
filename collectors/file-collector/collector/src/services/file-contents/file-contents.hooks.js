@@ -1,4 +1,4 @@
-
+const fileContentsWidget = require('../../hooks/file-contents-widget');
 
 module.exports = {
   before: {
@@ -13,7 +13,7 @@ module.exports = {
 
   after: {
     all: [],
-    find: [],
+    find: [ fileContentsWidget() ],
     get: [],
     create: [],
     update: [],
