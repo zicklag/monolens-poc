@@ -1,0 +1,17 @@
+{
+  "name": "file-collector-agent",
+  "version": "0.0.1",
+  "description": "Agent for the monolens file collector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monolens"
+  ],
+  "author": "Zicklag <zicklag@katharostech.com>",
+  "license": "MIT",
+  "dependencies": {
+    "feathers-client": "^2.4.0"
+  }
+}
