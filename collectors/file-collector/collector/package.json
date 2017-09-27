@@ -32,6 +32,7 @@
     "compression": "^1.7.0",
     "cors": "^2.8.4",
     "feathers": "^2.2.0",
+    "feathers-client": "^2.4.0",
     "feathers-configuration": "^0.4.1",
     "feathers-errors": "^2.9.2",
     "feathers-hooks": "^2.0.3",
