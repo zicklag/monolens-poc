@@ -12,6 +12,8 @@
   "private": false,
   "dependencies": {
     "express": "^4.16.2",
-    "openmct": "nasa/openmct"
+    "feathers-client": "^2.4.0",
+    "openmct": "nasa/openmct",
+    "socket.io-client": "^2.0.3"
   }
 }
