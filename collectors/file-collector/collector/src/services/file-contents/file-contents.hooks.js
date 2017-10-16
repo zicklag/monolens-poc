@@ -1,11 +1,12 @@
 const fileContentsWidget = require('../../hooks/file-contents-widget');
+const { setNow } = require('feathers-hooks-common');
 
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [ setNow('timestamp') ],
     update: [],
     patch: [],
     remove: []

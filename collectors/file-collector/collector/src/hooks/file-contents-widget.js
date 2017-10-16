@@ -5,10 +5,12 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
   return function fileContentsWidget (hook) {
     // Hooks can either return nothing or a promise
     // that resolves with the `hook` object for asynchronous operations
-    hook.result = {
-      widgetType: "textarea",
-      content: hook.result.content
-    }
+    hook.result = hook.result.map(data => (
+      {
+        widgetType: "textarea",
+        content: data.content,
+      }
+    ))
 
     return Promise.resolve(hook);
   };

@@ -48,8 +48,8 @@ var MonolensFileContents = openmct => {
             telemetry: {
               values: [
                 {
-                  key: 'value',
-                  name: 'Contents'
+                  key: 'content',
+                  name: 'Content'
                 },
                 {
                   key: 'utc',

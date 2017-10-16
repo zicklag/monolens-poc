@@ -2,7 +2,7 @@
 class Service {
   constructor (options) {
     this.options = options || {};
-    this.data = {}
+    this.data = []
   }
 
   find (params) {
@@ -10,7 +10,7 @@ class Service {
   }
 
   create (data, params) {
-    this.data = data
+    this.data.push(data)
     return Promise.resolve(this.data);
   }
 }

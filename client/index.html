@@ -6,6 +6,7 @@
     <script src="node_modules/feathers-client/dist/feathers.js"></script>
     <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
     <script src="monolens-file-contents-plugin.js"></script>
+    <script src="file-contents-telemetry-plugin.js"></script>
     <script src="feathers-client.js"></script>
 </head>
 <body>
@@ -42,6 +43,9 @@
 
         openmct.install(openmct.plugins.Espresso())
 
+        var client = FeathersClient('localhost', 3090, feathers, io)
+
+        openmct.install(FileContentsTelemetryPlugin(client))
         openmct.install(MonolensFileContents())
 
         openmct.start()

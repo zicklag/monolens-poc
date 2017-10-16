@@ -17,13 +17,13 @@ const fileContents = client.service('/file-contents')
 fileContents.find().then(data => {
   console.log("loading initial data");
   console.log(data)
-  app.innerHTML = `<p>${data.content}</p>`
+  app.innerHTML = `<p>${data.map(record => (record.content + ': ' + record.timestamp + '<br />'))}</p>`
 })
 
 fileContents.on('created', data => {
   console.log("Data updated");
   console.log(data);
-  app.innerHTML = `<p>${data.content}</p>`
+  app.innerHTML = `<p>${data.map(record => (record.content + ': ' + record.timestamp + '<br \>'))}</p>`
 })
 
 
